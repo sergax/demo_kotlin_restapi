@@ -13,5 +13,5 @@ data class User(
 
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    var photos: List<Photo>
+    var photos: List<Photo> = mutableListOf()
 )

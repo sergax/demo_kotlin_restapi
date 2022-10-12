@@ -6,6 +6,7 @@ import com.example.demo_kotlin_restapi.repo.UserRepo
 import com.example.demo_kotlin_restapi.service.UserService
 import com.example.demo_kotlin_restapi.tools.UserMapper
 import org.springframework.stereotype.Service
+import java.util.Arrays
 import javax.persistence.EntityNotFoundException
 
 @Service

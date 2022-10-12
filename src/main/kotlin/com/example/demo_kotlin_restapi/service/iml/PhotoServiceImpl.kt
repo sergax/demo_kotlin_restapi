@@ -19,7 +19,7 @@ class PhotoServiceImpl(
     override fun createPhoto(userId: Int, photoDto: PhotoDto): PhotoDto {
         val user = userRepo.findById(userId).orElseThrow()
         val photo = photoMapper.toEntity(photoDto)
-        user.photos += photo
+        user.photos.plus(photo)
         val savedPhoto = photoRepo.save(photo)
         return photoMapper.fromEntity(savedPhoto)
     }

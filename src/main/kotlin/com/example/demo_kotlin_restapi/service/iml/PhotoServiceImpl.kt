@@ -4,6 +4,7 @@ import com.example.demo_kotlin_restapi.dto.PhotoDto
 import com.example.demo_kotlin_restapi.model.Photo
 import com.example.demo_kotlin_restapi.repo.PhotoRepo
 import com.example.demo_kotlin_restapi.repo.UserRepo
+import com.example.demo_kotlin_restapi.service.NotUniqueDataException
 import com.example.demo_kotlin_restapi.service.PhotoService
 import com.example.demo_kotlin_restapi.tools.PhotoMapper
 import org.springframework.stereotype.Service
@@ -16,10 +17,12 @@ class PhotoServiceImpl(
     private val photoMapper: PhotoMapper,
 ) : PhotoService {
 
-    override fun createPhoto(userId: Int, photoDto: PhotoDto): PhotoDto {
+    override fun createPhoto(userId: Int, photoDto: PhotoDto): PhotoDto  {
+        if (photoRepo.existsPhotoByName(photoDto.name))
+            throw NotUniqueDataException("This photo already exists")
         val user = userRepo.findById(userId).orElseThrow()
         val photo = photoMapper.toEntity(photoDto)
-        user.photos.plus(photo)
+        user.photos += photo
         val savedPhoto = photoRepo.save(photo)
         return photoMapper.fromEntity(savedPhoto)
     }

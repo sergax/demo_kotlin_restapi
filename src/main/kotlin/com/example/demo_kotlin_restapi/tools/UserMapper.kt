@@ -19,7 +19,7 @@ class UserMapper(
         dto.id,
         dto.name,
         dto.age,
-        dto.photoDtos
+        dto.photos
     )
 
 }

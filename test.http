@@ -1,4 +1,4 @@
-GET http://localhost:8080/api/v1/users
+GET http://localhost:8080/api/v1/users/2
 
 ###
 
@@ -16,8 +16,8 @@ POST http://localhost:8080/api/v1/users/2/photos
 Content-Type: application/json
 
 {
-  "name": "Dog",
+  "name": "Street255",
   "date": "2023-10-09T18:44:46",
-  "description": "This is my dog",
+  "description": "This is my Street",
   "url": "https://www.youtube"
 }

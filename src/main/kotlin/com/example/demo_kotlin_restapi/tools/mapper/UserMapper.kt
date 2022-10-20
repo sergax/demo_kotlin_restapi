@@ -1,4 +1,4 @@
-package com.example.demo_kotlin_restapi.tools
+package com.example.demo_kotlin_restapi.tools.mapper
 
 import com.example.demo_kotlin_restapi.dto.UserDto
 import com.example.demo_kotlin_restapi.model.User
@@ -12,6 +12,7 @@ class UserMapper(
         entity.id,
         entity.name,
         entity.age,
+        entity.avatar,
         entity.photos
     )
 
@@ -19,6 +20,7 @@ class UserMapper(
         dto.id,
         dto.name,
         dto.age,
+        dto.avatar,
         dto.photos
     )
 

@@ -6,6 +6,7 @@ data class UserDto(
     val id: Int,
     val name: String,
     val age: Int,
+    val avatar: String,
     val photos: List<Photo>
 )
 

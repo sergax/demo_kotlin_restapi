@@ -1,4 +1,6 @@
-GET http://localhost:8080/api/v1/users/2
+###USER
+
+GET http://localhost:8080/api/v1/users/1
 
 ###
 
@@ -12,6 +14,29 @@ Content-Type: application/json
 
 ###
 
+PUT http://localhost:8080/api/v1/users/2
+Content-Type: application/json
+
+{
+  "name": "Sergey",
+  "age": 27
+}
+
+###
+
+DELETE http://localhost:8080/api/v1/users/2
+Content-Type: application/json
+
+
+
+
+###PHOTO#################################################
+
+GET http://localhost:8080/api/v1/users/photos/2
+Content-Type: application/json
+
+###
+
 POST http://localhost:8080/api/v1/users/2/photos
 Content-Type: application/json
 
@@ -20,4 +45,16 @@ Content-Type: application/json
   "date": "2023-10-09T18:44:46",
   "description": "This is my Street",
   "url": "https://www.youtube"
+}
+
+###
+
+PUT http://localhost:8080/api/v1/users/photos/2
+Content-Type: application/json
+
+{
+"name": "Photo 123 UPDATED TIME",
+"date": "2023-10-09T18:44:46",
+"description": "This is my Street UPDATED",
+"url": "https://www.youtube/UPDATED"
 }

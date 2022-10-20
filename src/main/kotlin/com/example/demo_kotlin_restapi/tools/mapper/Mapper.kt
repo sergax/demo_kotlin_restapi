@@ -1,4 +1,4 @@
-package com.example.demo_kotlin_restapi.tools
+package com.example.demo_kotlin_restapi.tools.mapper
 
 
 interface Mapper<D, E> {

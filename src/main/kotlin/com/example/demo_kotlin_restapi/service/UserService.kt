@@ -10,4 +10,3 @@ interface UserService {
     fun updateUser(id: Int, user: User): User
     fun deleteUser(id: Int)
 }
-

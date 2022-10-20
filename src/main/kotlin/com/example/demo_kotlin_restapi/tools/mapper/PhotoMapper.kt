@@ -1,4 +1,4 @@
-package com.example.demo_kotlin_restapi.tools
+package com.example.demo_kotlin_restapi.tools.mapper
 
 import com.example.demo_kotlin_restapi.dto.PhotoDto
 import com.example.demo_kotlin_restapi.model.Photo

@@ -8,4 +8,5 @@ class DemoKotlinRestapiApplication
 
 fun main(args: Array<String>) {
 	runApplication<DemoKotlinRestapiApplication>(*args)
+
 }
